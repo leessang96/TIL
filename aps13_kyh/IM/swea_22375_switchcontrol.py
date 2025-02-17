@@ -42,9 +42,9 @@ for tc in range(1, T+1):
         if a[i] != b[i]:
             cnt += 1
             for j in range(i, n):
-                if b[j] == 1:
-                    b[j] = 0
+                if a[j] == 0:
+                    a[j] = 1
                 else:
-                    b[j] = 1
-    print(f"#{tc} {cnt}")
+                    a[j] = 0
 
+    print(f'#{tc} {cnt}')
