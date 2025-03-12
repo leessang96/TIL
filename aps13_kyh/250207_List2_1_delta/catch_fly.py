@@ -107,14 +107,37 @@
 24 1 24 2 12 7 3 21 10 21 19 29 0 5
 
 '''
+# T = int(input())
+# for tc in range(1, T + 1):
+#     n, m = map(int, input().split())
+#     arr = [list(map(int, input().split())) for _ in range(n)]
+#
+#     max_v = 0
+#     for i in range(n - m + 1):
+#         for j in range(n - m + 1):
+#             s = 0
+#             for r in range(m):
+#                 for c in range(m):
+#                     s += arr[i + r][j + c]
+#
+#             if max_v < s:
+#                 max_v = s
+#
+#     print(f'#{tc} {max_v}')
+
+
+
+
+
+
 T = int(input())
-for tc in range(1, T + 1):
+for tc in range(1, T+1):
     n, m = map(int, input().split())
-    arr = [list(map(int, input().split())) for _ in range(n)]
+    arr =[list(map(int, input().split())) for _ in range(n)]
 
     max_v = 0
-    for i in range(n - m + 1):
-        for j in range(n - m + 1):
+    for i in range(n - m - 1):
+        for j in range(n - m - 1):
             s = 0
             for r in range(m):
                 for c in range(m):
@@ -123,7 +146,25 @@ for tc in range(1, T + 1):
             if max_v < s:
                 max_v = s
 
-    print(f'#{tc} {max_v}')
+    print(f"#{tc} {max_v}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

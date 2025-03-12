@@ -31,3 +31,4 @@ for tc in range(1, T+1):
         if count[max_i] <= count[i]:
             max_i = i
     print(f'#{tc} {max_i} { count[max_i]}')
+
