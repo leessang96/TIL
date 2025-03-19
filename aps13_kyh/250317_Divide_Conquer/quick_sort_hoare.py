@@ -9,18 +9,16 @@ def partitioning(left, right):
         # i = 큰 값을 검색 오른쪽으로 진행
         while i <= j and arr[i] <= pivot:
             i += 1
-
         # j = 작은 값을 검색하면서 왼쪽으로 진행
         while i <= j and arr[j] >= pivot:
             j -= 1
-
         # swap
         if i < j:
             arr[i], arr[j] = arr[j], arr[i]
-
     # pivot 위치를 확정시켜주기 (j와 바꾸기)
     arr[left], arr[j] = arr[j], arr[left]
     return j
+
 
 # left, right : 작업 범위
 def quick_sort(left, right):

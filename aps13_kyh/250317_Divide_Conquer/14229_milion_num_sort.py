@@ -1,4 +1,4 @@
-def partition(l, r):
+def partitioning(l, r):
     pivot = arr[l]
 
     i, j = l, r
@@ -15,17 +15,14 @@ def partition(l, r):
     return j
 
 
-def quick_sort(l, r):
+def qsort(l, r):
     if l < r:
-        pivot = partition(l, r)
-        quick_sort(l, pivot-1)
-        quick_sort(pivot+1, r)
+        pivot = partitioning(l, r)
+
+        qsort(l, pivot - 1)
+        qsort(pivot + 1, r)
 
 
-T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    arr = list(map(int, input().split()))
-    quick_sort(0, len(arr) - 1)
-
-    print(f"#{tc} {arr[N//2]}")
+arr = list(map(int, input().split()))
+qsort(0, len(arr) - 1)
+print(arr[500000])
