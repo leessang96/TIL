@@ -61,7 +61,7 @@ def union(x, y):
     elif ranks[ref_x] > ranks[ref_y]:
         parents[ref_y] = ref_x
     else:
-        # rank 가 같으면 한 쪽으로 병합하고, 대표자의 rank 증가
+        # rank 가 같으면 한 쪽으로 병합하고, 대자의 rank 증가
         parents[ref_y] = ref_x
         ranks[ref_x] += 1
 
